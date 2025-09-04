@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  api:
+    build: ./api
+    env_file: .env
+    environment:
+      - DATABASE_URL=${DATABASE_URL:-sqlite:///./data.db}
+      - FRONTEND_ORIGIN=${FRONTEND_ORIGIN:-http://localhost:3000}
+      - REDIS_URL=${REDIS_URL:-redis://redis:6379/0}
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+  worker:
+    build: ./api
+    command: python -c "from app.worker import get_queue; print('worker-image-built')"
+    env_file: .env
+    environment:
+      - REDIS_URL=${REDIS_URL:-redis://redis:6379/0}
+    depends_on:
+      - api
+      - redis
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+  web:
+    build: ./web
+    environment:
+      - API_BASE=http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
