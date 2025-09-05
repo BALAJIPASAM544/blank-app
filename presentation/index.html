@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Presentation Title</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+    <link id="theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" />
+
+    <style>
+      .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+      .reveal .slides { text-align: left; }
+      .brand { color: #4f46e5; }
+      .muted { opacity: .8; }
+      .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+      .footer { position: fixed; right: 20px; bottom: 12px; font-size: 16px; opacity: .6; }
+      .tag { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #eef2ff; color: #3730a3; font-weight: 600; }
+      ul.tight > li { margin: 6px 0; }
+      .small { font-size: 80%; }
+      .center { text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Title -->
+        <section>
+          <h1 class="brand">Your Presentation Title</h1>
+          <p class="muted">Subtitle or tagline goes here</p>
+          <p class="small">Presenter Name • Company/Team • Date</p>
+          <aside class="notes">Welcome, intro, and housekeeping.</aside>
+        </section>
+
+        <!-- Agenda -->
+        <section>
+          <h2>Agenda</h2>
+          <ol>
+            <li>Background</li>
+            <li>Problem</li>
+            <li>Solution</li>
+            <li>Plan & Timeline</li>
+            <li>Q&A</li>
+          </ol>
+          <aside class="notes">Set expectations and flow.</aside>
+        </section>
+
+        <!-- Background -->
+        <section>
+          <h2>Background</h2>
+          <ul class="tight">
+            <li>Context: what is the current situation?</li>
+            <li>Why this matters now</li>
+            <li>Stakeholders and audience</li>
+          </ul>
+        </section>
+
+        <!-- Problem -->
+        <section>
+          <h2>The Problem</h2>
+          <div class="two-col">
+            <div>
+              <p><span class="tag">Symptoms</span></p>
+              <ul class="tight">
+                <li>Symptom A</li>
+                <li>Symptom B</li>
+                <li>Symptom C</li>
+              </ul>
+            </div>
+            <div>
+              <p><span class="tag">Impact</span></p>
+              <ul class="tight">
+                <li>Cost/time impact</li>
+                <li>Risk exposure</li>
+                <li>Customer experience</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Solution overview -->
+        <section>
+          <h2>Solution Overview</h2>
+          <ul class="tight">
+            <li>Goal: the clear desired outcome</li>
+            <li>Approach: the high‑level strategy</li>
+            <li>Scope: what is in vs. out</li>
+          </ul>
+        </section>
+
+        <!-- Architecture / Approach -->
+        <section>
+          <h2>Architecture / Approach</h2>
+          <ul class="tight">
+            <li>Component 1 — role and interfaces</li>
+            <li>Component 2 — data flow</li>
+            <li>Component 3 — dependencies</li>
+          </ul>
+          <p class="small muted">Tip: add a diagram or screenshot here.</p>
+        </section>
+
+        <!-- Demo / Example -->
+        <section>
+          <h2>Demo / Example</h2>
+          <ul class="tight">
+            <li>Key scenario walkthrough</li>
+            <li>Live demo or screenshots</li>
+          </ul>
+        </section>
+
+        <!-- Timeline -->
+        <section>
+          <h2>Plan & Timeline</h2>
+          <ol>
+            <li>Phase 1 — Discovery (W1‑W2)</li>
+            <li>Phase 2 — Build (W3‑W6)</li>
+            <li>Phase 3 — Launch (W7‑W8)</li>
+          </ol>
+        </section>
+
+        <!-- Metrics -->
+        <section>
+          <h2>Success Metrics</h2>
+          <ul class="tight">
+            <li>Metric A (target)</li>
+            <li>Metric B (target)</li>
+            <li>Metric C (target)</li>
+          </ul>
+        </section>
+
+        <!-- Risks -->
+        <section>
+          <h2>Risks & Mitigations</h2>
+          <ul class="tight">
+            <li>Risk 1 — mitigation</li>
+            <li>Risk 2 — mitigation</li>
+            <li>Risk 3 — mitigation</li>
+          </ul>
+        </section>
+
+        <!-- Next steps -->
+        <section>
+          <h2>Next Steps</h2>
+          <ul class="tight">
+            <li>Decision or approval needed</li>
+            <li>Owner and due date</li>
+            <li>Follow‑up actions</li>
+          </ul>
+        </section>
+
+        <!-- Q&A -->
+        <section>
+          <h1 class="center">Q&A</h1>
+          <p class="center muted">Thank you!</p>
+        </section>
+      </div>
+    </div>
+
+    <div class="footer">Press F for fullscreen • ← → to navigate • S for notes</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        transition: 'slide',
+        plugins: [ RevealNotes ],
+      });
+    </script>
+  </body>
+  </html>
+
